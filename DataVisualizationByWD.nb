@@ -1,0 +1,1198 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.4' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     44908,       1190]
+NotebookOptionsPosition[     42775,       1110]
+NotebookOutlinePosition[     43129,       1126]
+CellTagsIndexPosition[     43086,       1123]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Data visualization pre and post by WOS", "Section",
+ CellChangeTimes->{{3.701768313843555*^9, 3.70176832897897*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Sorting parameters pre and postValues", "Subsection",
+ CellChangeTimes->{{3.701770046509274*^9, 3.701770051132915*^9}, {
+   3.701770159811335*^9, 3.7017701867788353`*^9}, 3.701770584491974*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"preValues", "=", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {
+        RowBox[{"\[Alpha]", "\[Rule]", "0.1400`"}], 
+        RowBox[{"Dv", "\[Rule]", "1125`"}]},
+       {
+        RowBox[{"\[Alpha]", "\[Rule]", "0.6400`"}], 
+        RowBox[{"Dv", "\[Rule]", "525`"}]},
+       {
+        RowBox[{"\[Alpha]", "\[Rule]", "0.4800`"}], 
+        RowBox[{"Dv", "\[Rule]", "125`"}]},
+       {
+        RowBox[{"\[Alpha]", "\[Rule]", "0.0700`"}], 
+        RowBox[{"Dv", "\[Rule]", "125`"}]},
+       {
+        RowBox[{"\[Alpha]", "\[Rule]", "0.1100`"}], 
+        RowBox[{"Dv", "\[Rule]", "1225`"}]},
+       {
+        RowBox[{"\[Alpha]", "\[Rule]", "0.1200`"}], 
+        RowBox[{"Dv", "\[Rule]", "725`"}]},
+       {
+        RowBox[{"\[Alpha]", "\[Rule]", "0.0600`"}], 
+        RowBox[{"Dv", "\[Rule]", "825`"}]},
+       {
+        RowBox[{"\[Alpha]", "\[Rule]", "0.1900`"}], 
+        RowBox[{"Dv", "\[Rule]", "1025`"}]},
+       {
+        RowBox[{"\[Alpha]", "\[Rule]", "0.0800`"}], 
+        RowBox[{"Dv", "\[Rule]", "825`"}]},
+       {
+        RowBox[{"\[Alpha]", "\[Rule]", "0.0900`"}], 
+        RowBox[{"Dv", "\[Rule]", "725`"}]},
+       {
+        RowBox[{"\[Alpha]", "\[Rule]", "0.0800`"}], 
+        RowBox[{"Dv", "\[Rule]", "825`"}]},
+       {
+        RowBox[{"\[Alpha]", "\[Rule]", "0.1800`"}], 
+        RowBox[{"Dv", "\[Rule]", "225`"}]},
+       {
+        RowBox[{"\[Alpha]", "\[Rule]", "0.1000`"}], 
+        RowBox[{"Dv", "\[Rule]", "225`"}]},
+       {
+        RowBox[{"\[Alpha]", "\[Rule]", "0.0900`"}], 
+        RowBox[{"Dv", "\[Rule]", "125`"}]},
+       {
+        RowBox[{"\[Alpha]", "\[Rule]", "0.2500`"}], 
+        RowBox[{"Dv", "\[Rule]", "225`"}]},
+       {
+        RowBox[{"\[Alpha]", "\[Rule]", "0.5200`"}], 
+        RowBox[{"Dv", "\[Rule]", "1925`"}]},
+       {
+        RowBox[{"\[Alpha]", "\[Rule]", "0.0500`"}], 
+        RowBox[{"Dv", "\[Rule]", "1025`"}]},
+       {
+        RowBox[{"\[Alpha]", "\[Rule]", "0.0300`"}], 
+        RowBox[{"Dv", "\[Rule]", "425`"}]},
+       {
+        RowBox[{"\[Alpha]", "\[Rule]", "0.0300`"}], 
+        RowBox[{"Dv", "\[Rule]", "125`"}]},
+       {
+        RowBox[{"\[Alpha]", "\[Rule]", "0.1200`"}], 
+        RowBox[{"Dv", "\[Rule]", "25`"}]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Alpha]Pre", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"\[Alpha]", "/.", 
+      RowBox[{"preValues", "[", 
+       RowBox[{"[", 
+        RowBox[{"i", ",", "1"}], "]"}], "]"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "1", ",", "20"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Mu]Pre", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{"0", ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "1", ",", "20"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"DvPre", "=", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Dv", "/.", 
+       RowBox[{"preValues", "[", 
+        RowBox[{"[", 
+         RowBox[{"i", ",", "2"}], "]"}], "]"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "1", ",", "20"}], "}"}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"postValues", "=", 
+    TagBox[
+     RowBox[{"(", "\[NoBreak]", GridBox[{
+        {
+         RowBox[{"\[Alpha]", "\[Rule]", "0.0100`"}], 
+         RowBox[{"\[Mu]", "\[Rule]", "0.0004`"}], 
+         RowBox[{"Dv", "\[Rule]", "225`"}]},
+        {
+         RowBox[{"\[Alpha]", "\[Rule]", "0.3400`"}], 
+         RowBox[{"\[Mu]", "\[Rule]", "0.0136`"}], 
+         RowBox[{"Dv", "\[Rule]", "425`"}]},
+        {
+         RowBox[{"\[Alpha]", "\[Rule]", "0.0100`"}], 
+         RowBox[{"\[Mu]", "\[Rule]", "0`"}], 
+         RowBox[{"Dv", "\[Rule]", "125`"}]},
+        {
+         RowBox[{"\[Alpha]", "\[Rule]", "0.0400`"}], 
+         RowBox[{"\[Mu]", "\[Rule]", "0.0016`"}], 
+         RowBox[{"Dv", "\[Rule]", "125`"}]},
+        {
+         RowBox[{"\[Alpha]", "\[Rule]", "0.0200`"}], 
+         RowBox[{"\[Mu]", "\[Rule]", "0.0008`"}], 
+         RowBox[{"Dv", "\[Rule]", "225`"}]},
+        {
+         RowBox[{"\[Alpha]", "\[Rule]", "0.0600`"}], 
+         RowBox[{"\[Mu]", "\[Rule]", "0.0024`"}], 
+         RowBox[{"Dv", "\[Rule]", "525`"}]},
+        {
+         RowBox[{"\[Alpha]", "\[Rule]", "0.1100`"}], 
+         RowBox[{"\[Mu]", "\[Rule]", "0`"}], 
+         RowBox[{"Dv", "\[Rule]", "125`"}]},
+        {
+         RowBox[{"\[Alpha]", "\[Rule]", "0.1800`"}], 
+         RowBox[{"\[Mu]", "\[Rule]", "0`"}], 
+         RowBox[{"Dv", "\[Rule]", "625`"}]},
+        {
+         RowBox[{"\[Alpha]", "\[Rule]", "0.2900`"}], 
+         RowBox[{"\[Mu]", "\[Rule]", "0.0116`"}], 
+         RowBox[{"Dv", "\[Rule]", "25`"}]},
+        {
+         RowBox[{"\[Alpha]", "\[Rule]", "0.1200`"}], 
+         RowBox[{"\[Mu]", "\[Rule]", "0`"}], 
+         RowBox[{"Dv", "\[Rule]", "1125`"}]},
+        {
+         RowBox[{"\[Alpha]", "\[Rule]", "0.0200`"}], 
+         RowBox[{"\[Mu]", "\[Rule]", "0.0008`"}], 
+         RowBox[{"Dv", "\[Rule]", "25`"}]},
+        {
+         RowBox[{"\[Alpha]", "\[Rule]", "0.2700`"}], 
+         RowBox[{"\[Mu]", "\[Rule]", "0.0108`"}], 
+         RowBox[{"Dv", "\[Rule]", "225`"}]},
+        {
+         RowBox[{"\[Alpha]", "\[Rule]", "0.0300`"}], 
+         RowBox[{"\[Mu]", "\[Rule]", "0`"}], 
+         RowBox[{"Dv", "\[Rule]", "25`"}]},
+        {
+         RowBox[{"\[Alpha]", "\[Rule]", "0.1000`"}], 
+         RowBox[{"\[Mu]", "\[Rule]", "0`"}], 
+         RowBox[{"Dv", "\[Rule]", "125`"}]},
+        {
+         RowBox[{"\[Alpha]", "\[Rule]", "0.1500`"}], 
+         RowBox[{"\[Mu]", "\[Rule]", "0`"}], 
+         RowBox[{"Dv", "\[Rule]", "625`"}]},
+        {
+         RowBox[{"\[Alpha]", "\[Rule]", "0.2000`"}], 
+         RowBox[{"\[Mu]", "\[Rule]", "0.0080`"}], 
+         RowBox[{"Dv", "\[Rule]", "1925`"}]},
+        {
+         RowBox[{"\[Alpha]", "\[Rule]", "0.0400`"}], 
+         RowBox[{"\[Mu]", "\[Rule]", "0`"}], 
+         RowBox[{"Dv", "\[Rule]", "325`"}]},
+        {
+         RowBox[{"\[Alpha]", "\[Rule]", "0.1400`"}], 
+         RowBox[{"\[Mu]", "\[Rule]", "0.0056`"}], 
+         RowBox[{"Dv", "\[Rule]", "1525`"}]},
+        {
+         RowBox[{"\[Alpha]", "\[Rule]", "0.0300`"}], 
+         RowBox[{"\[Mu]", "\[Rule]", "0`"}], 
+         RowBox[{"Dv", "\[Rule]", "125`"}]},
+        {
+         RowBox[{"\[Alpha]", "\[Rule]", "0.2000`"}], 
+         RowBox[{"\[Mu]", "\[Rule]", "0.0080`"}], 
+         RowBox[{"Dv", "\[Rule]", "25`"}]}
+       },
+       GridBoxAlignment->{
+        "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+         "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.7]}, 
+           Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+     Function[BoxForm`e$, 
+      MatrixForm[BoxForm`e$]]]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Alpha]Post", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"\[Alpha]", "/.", 
+      RowBox[{"postValues", "[", 
+       RowBox[{"[", 
+        RowBox[{"i", ",", "1"}], "]"}], "]"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "1", ",", "20"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Mu]Post", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"\[Mu]", "/.", 
+      RowBox[{"postValues", "[", 
+       RowBox[{"[", 
+        RowBox[{"i", ",", "2"}], "]"}], "]"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "1", ",", "20"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"DvPost", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"Dv", "/.", 
+      RowBox[{"postValues", "[", 
+       RowBox[{"[", 
+        RowBox[{"i", ",", "3"}], "]"}], "]"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "1", ",", "20"}], "}"}]}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.7017691826074944`*^9, 3.701769263246209*^9}, {
+   3.701769405136538*^9, 3.701769451360224*^9}, {3.7017696202860727`*^9, 
+   3.7017697618741083`*^9}, {3.701769795177733*^9, 3.701769842179071*^9}, {
+   3.7017702018758*^9, 3.7017702063793497`*^9}, {3.701770524902322*^9, 
+   3.70177057814955*^9}, {3.701770612533877*^9, 3.701770624981677*^9}, {
+   3.7017718067693*^9, 3.701771814000729*^9}, 3.701772369293663*^9, {
+   3.702553172161384*^9, 3.7025532267790537`*^9}, {3.702553544662078*^9, 
+   3.702553652308545*^9}, {3.702553856957107*^9, 3.7025538988175297`*^9}, {
+   3.702553935415454*^9, 3.70255395198079*^9}, {3.702554085001944*^9, 
+   3.7025541195538073`*^9}, {3.702554152533863*^9, 3.702554161191099*^9}, {
+   3.702555010053301*^9, 3.702555011027274*^9}, {3.702555061432399*^9, 
+   3.702555231377737*^9}, {3.7025552771754007`*^9, 3.702555565685586*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Export", "[", 
+  RowBox[{"\"\<mu.txt\>\"", ",", 
+   RowBox[{"\[Mu]Post", "-", "\[Mu]Pre"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Export", "[", 
+  RowBox[{"\"\<alpha.txt\>\"", ",", 
+   RowBox[{"\[Alpha]Post", "-", "\[Alpha]Pre"}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Export", "[", 
+  RowBox[{"\"\<Dv.txt\>\"", ",", 
+   RowBox[{"DvPost", "-", "DvPre"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Export", "[", 
+  RowBox[{"\"\<alphamu.txt\>\"", ",", 
+   RowBox[{"\[Alpha]Post", "-", "\[Mu]Post", "-", 
+    RowBox[{"(", 
+     RowBox[{"\[Alpha]Pre", "-", "\[Mu]Pre"}], ")"}]}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.7024912519595065`*^9, 3.702491271128666*^9}, {
+  3.702491431567877*^9, 3.702491473708235*^9}, {3.7024915269188614`*^9, 
+  3.702491591227106*^9}, {3.7024916747144265`*^9, 3.7024916944135494`*^9}, {
+  3.702492230614705*^9, 3.7024923745015545`*^9}}],
+
+Cell[BoxData["\<\"mu.txt\"\>"], "Output",
+ CellChangeTimes->{{3.7024914597090387`*^9, 3.7024914752396436`*^9}, {
+   3.7024915455834866`*^9, 3.7024915621712756`*^9}, 3.702492428347517*^9}],
+
+Cell[BoxData["\<\"alpha.txt\"\>"], "Output",
+ CellChangeTimes->{{3.7024914597090387`*^9, 3.7024914752396436`*^9}, {
+   3.7024915455834866`*^9, 3.7024915621712756`*^9}, 3.702492428347517*^9}],
+
+Cell[BoxData["\<\"Dv.txt\"\>"], "Output",
+ CellChangeTimes->{{3.7024914597090387`*^9, 3.7024914752396436`*^9}, {
+   3.7024915455834866`*^9, 3.7024915621712756`*^9}, 3.702492428347517*^9}],
+
+Cell[BoxData["\<\"alphamu.txt\"\>"], "Output",
+ CellChangeTimes->{{3.7024914597090387`*^9, 3.7024914752396436`*^9}, {
+   3.7024915455834866`*^9, 3.7024915621712756`*^9}, 3.702492428363143*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\[Alpha]", "Subsection",
+ CellChangeTimes->{{3.701768657189266*^9, 3.701768678260684*^9}, {
+  3.701772353092723*^9, 3.701772354124802*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"patientID", "=", 
+    RowBox[{"Range", "[", 
+     RowBox[{"1", ",", "20"}], "]"}]}], ";"}], " ", 
+  RowBox[{"(*", 
+   RowBox[{"For", " ", "labeling", " ", "data", " ", "points"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[Alpha]PrePostData", "=", 
+    RowBox[{"Transpose", "@", 
+     RowBox[{"{", 
+      RowBox[{"\[Alpha]Pre", ",", "\[Alpha]Post", ",", "patientID"}], 
+      "}"}]}]}], ";"}], " "}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"labels", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Text", "[", 
+      RowBox[{
+       RowBox[{"#", "[", 
+        RowBox[{"[", "3", "]"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"#", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], ",", 
+         RowBox[{"0.02", "+", 
+          RowBox[{"#", "[", 
+           RowBox[{"[", "2", "]"}], "]"}]}]}], "}"}]}], "]"}], "&"}], "/@", 
+    "\[Alpha]PrePostData"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{"\[Alpha]", ",", 
+     RowBox[{"{", 
+      RowBox[{"\[Alpha]", ",", "0", ",", 
+       RowBox[{"Max", "[", "\[Alpha]Pre", "]"}]}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"PlotStyle", "\[Rule]", "Orange"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"PlotRange", "\[Rule]", "All"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"AspectRatio", "\[Rule]", "1"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<\[Alpha] preTreatment\>\"", ",", 
+        "\"\<\[Alpha] postTreatment\>\""}], "}"}]}]}], "\[IndentingNewLine]", 
+    "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"ListPlot", "[", 
+    RowBox[{"\[Alpha]PrePostData", "[", 
+     RowBox[{"[", 
+      RowBox[{"All", ",", 
+       RowBox[{"{", 
+        RowBox[{"1", ",", "2"}], "}"}]}], "]"}], "]"}], "]"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Graphics", "[", 
+    RowBox[{"{", 
+     RowBox[{"Red", ",", "labels"}], "}"}], "]"}]}], "\[IndentingNewLine]", 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.701772264047423*^9, 3.7017722938233337`*^9}, {
+  3.7017723271671753`*^9, 3.701772332653861*^9}, {3.701772429197898*^9, 
+  3.701772492315166*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{{{{}, {}, 
+     {RGBColor[1, 0.5, 0], AbsoluteThickness[1.6], Opacity[1.], 
+      LineBox[CompressedData["
+1:eJxFxW0w03EcAPDhjuQpT1PdGCqpU9F1rTpJ5ewB6VKRXauZdW2ah9gy2zXh
+LvPU4eZS6hzXiWNWq7Q/yloWWkZo8jTPK5e77NCL5KoXvr8Xn/v4JKScY1vi
+cLiof/5PCltdFNlHhmzsRGqtbMH2nNjYl67JlmBH4QAeOYOFUeEggW3yBewS
+rMxa4J7BOPDyWvx3GiaE3UPK/amYFFZZzJRQ9A/geH8xIWmhFu5RZU5LIhvg
+hBITu6BKAZuxtPBmgxIm9z094hbXAstG4nZ4d2HwqtEktP7TDjuYnNMqWjvg
+ejpxFE9/B6tpHDXXrIGD5VIFo7ETDr1XOfSW8gGum5VYqW264YIXNU2yNz3w
+L4uXxYZYHazVPBKoXHthopVAtum5HubRyyZEqj5Yar4bOC7rh7kUvief9RkW
+D39yvHxqAI7Z7fVQ5DIIX1cWzeVOoOXCa4fGWodg1TrJK6ngC7zSnmFP4xrg
+FEz/2iV8GJbzfXEurl9hr6TJCOYSOoZYcdDUMQJrt3ANF4tGYW5wfTaeMwYP
++E2+tyeNw7yIHIcY/ASs209Y0s+jOdGDZYeVRpgwJKoSUCbheabt8cVmdHeh
+zmjnPQVHDD5mEkvQB9Z+BPYuowPUqZa7EqfhQnaqj4cOLfWXENeDZuDqfA2x
+uBq9rSuX12IzC/cm9rnl2aLzLDzbztqhfx57tXnBEa1t+lZHwKNvlkdN39mJ
+1jE8YiNPonN+s9a3nkaT7iuezIWha/qpy7cpaGGYuPRZNNpv79RHPAM9pt2X
+PnMFXcrK2q5goteqXDlUNnrAKdxafAOd31jWRElGh1CN591T0Q05mbXydPRV
+YidNxEe7tzmbybfQPXGMSjchOnulIXQqC/0XUq1hUQ==
+       
+       "]]}}, {}, {}}, {{}, {{}, 
+     {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+      0.012833333333333334`], AbsoluteThickness[1.6], PointBox[CompressedData["
+1:eJxTTMoPSmViYGAQAWIQ/SZwh1zr64P21SLr3B9WtUDpJ/aHv2rE9B+6ag+S
+DdxxDy4PUb8Ryl9irwlU9VVjD5Q/Bap+H5ReB6dh6oLAAifsua4vLrDlOg7V
+t8UeJBvTfwkqvh1uDkweZj5Mn8fDKqDIRftZM0FgJ1T9PLh+mDgDGFywNwaD
+w/ZLgLLXFz+Ayp+E0ivh/oGZAwsXGB+V3gfXDwBrrZ8O
+       
+       "]]}, {}}, {}, {}, {{}, {}}}, 
+   {RGBColor[1, 0, 0], InsetBox["1", {0.14, 0.03}], 
+    InsetBox["2", {0.64, 0.36000000000000004}], InsetBox["3", {0.48, 0.03}], 
+    InsetBox["4", {0.07, 0.06}], InsetBox["5", {0.11, 0.04}], 
+    InsetBox["6", {0.12, 0.08}], InsetBox["7", {0.06, 0.13}], 
+    InsetBox["8", {0.19, 0.19999999999999998}], InsetBox["9", {0.08, 0.31}], 
+    InsetBox["10", {0.09, 0.13999999999999999}], InsetBox["11", {0.08, 0.04}],
+     InsetBox["12", {0.18, 0.29000000000000004}], InsetBox["13", {0.1, 0.05}],
+     InsetBox["14", {0.09, 0.12000000000000001}], 
+    InsetBox["15", {0.25, 0.16999999999999998}], InsetBox["16", {0.52, 0.22}],
+     InsetBox["17", {0.05, 0.06}], InsetBox["18", {0.03, 0.16}], 
+    InsetBox["19", {0.03, 0.05}], InsetBox["20", {0.12, 0.22}]}},
+  AspectRatio->1,
+  Axes->{True, True},
+  AxesLabel->{
+    FormBox["\"\[Alpha] preTreatment\"", TraditionalForm], 
+    FormBox["\"\[Alpha] postTreatment\"", TraditionalForm]},
+  AxesOrigin->{0, 1.3061224489795919`*^-8},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImagePadding->All,
+  ImageSize->{523., Automatic},
+  Method->{
+   "DefaultBoundaryStyle" -> Automatic, "DefaultMeshStyle" -> 
+    AbsolutePointSize[6], "ScalingFunctions" -> None, 
+    "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+         Part[#, 1]], 
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+         Part[#, 1]], 
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->{All, All},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.05], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{
+  3.70177229734313*^9, 3.701772335510668*^9, 3.701772365962508*^9, {
+   3.7017724323049307`*^9, 3.701772492926147*^9}, 3.702555619054908*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\[Mu]", "Subsection",
+ CellChangeTimes->{{3.7017686660208187`*^9, 3.701768668228904*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{"ListPlot", "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"patientID", "=", 
+    RowBox[{"Range", "[", 
+     RowBox[{"1", ",", "20"}], "]"}]}], ";"}], " ", 
+  RowBox[{"(*", 
+   RowBox[{"For", " ", "labeling", " ", "data", " ", "points"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[Mu]PrePostData", "=", 
+    RowBox[{"Transpose", "@", 
+     RowBox[{"{", 
+      RowBox[{"\[Mu]Pre", ",", "\[Mu]Post", ",", "patientID"}], "}"}]}]}], 
+   ";"}], " "}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"labels", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Text", "[", 
+      RowBox[{
+       RowBox[{"#", "[", 
+        RowBox[{"[", "3", "]"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"#", "[", 
+          RowBox[{"[", "3", "]"}], "]"}], ",", 
+         RowBox[{"0.005", "+", 
+          RowBox[{"#", "[", 
+           RowBox[{"[", "2", "]"}], "]"}]}]}], "}"}]}], "]"}], "&"}], "/@", 
+    "\[Mu]PrePostData"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"ListPlot", "[", "\[Mu]Post", "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"Graphics", "[", 
+    RowBox[{"{", 
+     RowBox[{"Red", ",", "labels"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\"\<patientID\>\"", ",", "\"\<\[Mu] postTreatment\>\""}], 
+     "}"}]}]}], "\[IndentingNewLine]", "]"}]}], "Input",
+ CellChangeTimes->{{3.7017710752527933`*^9, 3.7017711852667437`*^9}, {
+  3.701771830992481*^9, 3.7017718316231527`*^9}, {3.7017718718710613`*^9, 
+  3.7017719180531178`*^9}, {3.701771960309142*^9, 3.701771960404236*^9}, {
+  3.701772128721434*^9, 3.701772154760988*^9}, {3.7017721853528843`*^9, 
+  3.701772212445938*^9}}],
+
+Cell[BoxData["ListPlot"], "Output",
+ CellChangeTimes->{{3.701771134472007*^9, 3.701771186482931*^9}, 
+   3.701771788509365*^9, 3.701771833028646*^9, {3.701772143637982*^9, 
+   3.7017721555086403`*^9}, {3.701772196834736*^9, 3.701772213258972*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{{{}, {{}, 
+     {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+      0.012833333333333334`], AbsoluteThickness[1.6], PointBox[CompressedData["
+1:eJxTTMoPSmViYGAQAWIQDQEf7PlZ8p7e2+lvDxVwqKyLcLfM2gjlczh0NbTa
+ivwqhvIFHMSnLtXQEmiE8kUcXNzOa2vMb4DyJRxu75vOn6a5CsqXcbBvvLEr
+aNkMKF/BQeN4yMnln5ZA+UoOvrs1eiXUlkP5Kg5XiyfGmwtuhvLVHBhnbvKq
+iy2E8jUcFvkwCapfWQ3laznc/MD0ZOYxByhfx0GqgGVXlO50KF/Pwfb+p9QD
+/xZC+QYOPQanX7aegplv6GD6gC1TzaoHyjdyeGigH2e3ZwOUb+zw0HOj1eV1
+FVC+iYPr8Tc//ecssAcAOR1S7A==
+       "]]}, {}}, {}}, 
+   {RGBColor[1, 0, 0], InsetBox["1", {1, 0.00596820243457796}], 
+    InsetBox["2", {2, 0.07302709571683776}], 
+    InsetBox["3", {3, 0.009877165855163076}], 
+    InsetBox["4", {4, 0.013331612935487826}], 
+    InsetBox["5", {5, 0.013116067730870155}], 
+    InsetBox["6", {6, 0.0560970968279005}], 
+    InsetBox["7", {7, 0.029071972517164084}], 
+    InsetBox["8", {8, 0.04591381390243348}], 
+    InsetBox["9", {9, 0.05021252368100779}], 
+    InsetBox["10", {10, 0.07948144992072455}], 
+    InsetBox["11", {11, 0.009239552809997217}], 
+    InsetBox["12", {12, 0.05935297091130421}], 
+    InsetBox["13", {13, 0.0055119563502584925}], 
+    InsetBox["14", {14, 0.027633950809094563}], 
+    InsetBox["15", {15, 0.04014672512522885}], 
+    InsetBox["16", {16, 0.08230900724272}], 
+    InsetBox["17", {17, 0.018782787399449694}], 
+    InsetBox["18", {18, 0.07037236976072649}], 
+    InsetBox["19", {19, 0.011026101221396436}], 
+    InsetBox["20", {20, 0.03744256902543311}]}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{
+    FormBox["\"patientID\"", TraditionalForm], 
+    FormBox["\"\[Mu] postTreatment\"", TraditionalForm]},
+  AxesOrigin->{0., 0},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImagePadding->All,
+  ImageSize->{441., Automatic},
+  Method->{"CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+         Part[#, 1]], 
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+         Part[#, 1]], 
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->{{0., 20.}, {0, 0.07730900724272}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.02], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{{3.701771134472007*^9, 3.701771186482931*^9}, 
+   3.701771788509365*^9, 3.701771833028646*^9, {3.701772143637982*^9, 
+   3.7017721555086403`*^9}, {3.701772196834736*^9, 3.701772213310519*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Dv ", "Subsection",
+ CellChangeTimes->{{3.70176838029811*^9, 3.701768405305647*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"patientID", "=", 
+    RowBox[{"Range", "[", 
+     RowBox[{"1", ",", "20"}], "]"}]}], ";"}], " ", 
+  RowBox[{"(*", 
+   RowBox[{"For", " ", "labeling", " ", "data", " ", "points"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"DvPrePostData", "=", 
+    RowBox[{"Transpose", "@", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Log", "[", "DvPre", "]"}], ",", 
+       RowBox[{"Log", "[", "DvPost", "]"}], ",", "patientID"}], "}"}]}]}], 
+   ";"}], " "}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"labels", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Text", "[", 
+      RowBox[{
+       RowBox[{"#", "[", 
+        RowBox[{"[", "3", "]"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"#", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], ",", 
+         RowBox[{"0.1", "+", 
+          RowBox[{"#", "[", 
+           RowBox[{"[", "2", "]"}], "]"}]}]}], "}"}]}], "]"}], "&"}], "/@", 
+    "DvPrePostData"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{"Dv", ",", 
+     RowBox[{"{", 
+      RowBox[{"Dv", ",", "0", ",", 
+       RowBox[{"Max", "[", 
+        RowBox[{"Log", "[", "DvPre", "]"}], "]"}]}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"PlotStyle", "\[Rule]", "Orange"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"PlotRange", "\[Rule]", "All"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"AspectRatio", "\[Rule]", "1"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Log[Dv] innan behandling\>\"", ",", 
+        "\"\<Log[Dv] efter behandling\>\""}], "}"}]}]}], 
+    "\[IndentingNewLine]", "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"ListPlot", "[", 
+    RowBox[{"DvPrePostData", "[", 
+     RowBox[{"[", 
+      RowBox[{"All", ",", 
+       RowBox[{"{", 
+        RowBox[{"1", ",", "2"}], "}"}]}], "]"}], "]"}], "]"}]}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"Graphics", "[", 
+    RowBox[{"{", 
+     RowBox[{"Red", ",", "labels"}], "}"}], "]"}], "*)"}], 
+  "\[IndentingNewLine]", "]"}]}], "Input",
+ CellChangeTimes->{{3.7017709572622538`*^9, 3.701770957726303*^9}, {
+  3.7017710389979687`*^9, 3.701771039445345*^9}, {3.702534760365107*^9, 
+  3.7025347653568983`*^9}, {3.702535805152931*^9, 3.7025358199692516`*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{{{{}, {}, 
+     {RGBColor[1, 0.5, 0], AbsoluteThickness[1.6], Opacity[1.], 
+      LineBox[CompressedData["
+1:eJxFxW0w03EcAPD/lhDmGDIyWaXi7DgPu90yUeyuP3Iml2N0I2c0Z0YiMULq
+POSpNakkdHWpay2s0t08dO52xHm4vVCpXJc7287DraxtXfXC9/ficx9aZgE3
+m4hhWPw//9c+652hDNdG7JxhFjq1Y1nHd3ZPP/YwFyuCi5oOrJ3BauAeX+lN
+HGuHlRsz/BisF57QaNUnMAWsxsslUdg4LEvAuxem5uHrky1PpvM+wR+DVAq2
+cAW+s1J+MePGKsyo6JiiJejg8EpmzW32Bpxv7RzfMLkFk4gy/qzvT7hqvSqH
+NbwNZ3IpSoOXCV40d4bdL7HApOmIuUECFrmzYNEmMCaYAAdoqq1yrhBhpkUk
+kqh2wWbecLVKbwX7DT2372BYw46nLKwWgQ3MWzR/835lC2/VFdL6jHvgKBF7
+N9fPHjYmveG3iR1gQWFzlqmfBO9XaEyp846wzy/BtcMkJ7hR3vpV0Y8eWCWX
+2cU6w+vyD2k8HdqJwmgdqyXD338biJtHXWDpZf5k2Bj6QqONpjjFFTZ4Wh+s
+MKFTOS9GO9vd4GL9y7sS5l44L4SvLptD19rhJwty3eGkjIZtOokCW06XYoRH
+aN7Iu+h7sR7w8lv2QqgeHZGSO/SlzhPmFuoWkv33wVFHqJzlcXRyQT3xfKoX
+TA3FTXILevSWkuMqpcJeidWKERm6xAH3ye5CB9QsGQcfoKWiPwNnn6KFsdEu
+XSq0O2F2mbaGFo/I4tQ69NQl/mvxOvqqfrNt3IDWLrlxsjFveGwobeCxG5oq
+PuSRSEGX0nV1Rk80va/yHO6DlrX2kLX+6M24PEkHHR1vG6IND0ITJRPvm8LQ
+6aymYAYTrTQkd39moclyb4d6Njpf+KM0MBL9FzvPDUE=
+       
+       "]]}}, {}, {}}, {{}, {{}, 
+     {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+      0.012833333333333334`], AbsoluteThickness[1.6], PointBox[CompressedData["
+1:eJxTTMoPSmViYGAQAWIQnbPaY7ualIyDvIevpdgqUYdPc/XcdvBKOoSzfbkT
+Zirh8FzzU6VhgDBO+uhn/uCoQoT+lUfvJtpGSMHNYVqcWNZ7Rwqu/qDMvnmX
+d0k7GPe+/e54ACEP4XPC9cPchS4Pswedhsmjuw9VXtLh6g+nZn0HOTgNc8+h
+nn7BxUricH8vN+J8vjJQFsM8mD0wGgBtTIJb
+       "]]}, {}}, {}, {}, {{}, {}}}},
+  AspectRatio->1,
+  Axes->{True, True},
+  AxesLabel->{
+    FormBox["\"Log[Dv] innan behandling\"", TraditionalForm], 
+    FormBox["\"Log[Dv] efter behandling\"", TraditionalForm]},
+  AxesOrigin->{0, 1.5434043360656906`*^-7},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImagePadding->All,
+  ImageSize->{522., Automatic},
+  Method->{
+   "DefaultBoundaryStyle" -> Automatic, "DefaultMeshStyle" -> 
+    AbsolutePointSize[6], "ScalingFunctions" -> None, 
+    "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+         Part[#, 1]], 
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+         Part[#, 1]], 
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->{All, All},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.05], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{3.701770968750889*^9, 3.701771043981621*^9, 
+  3.702534767661968*^9, 3.7025358485240335`*^9, 3.702555725051547*^9, 
+  3.702562542542432*^9, 3.7025627956415873`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Show", "[", 
+  RowBox[{"%22", ",", 
+   RowBox[{"ImageSize", "\[Rule]", "Large"}]}], "]"}]], "Input",
+ NumberMarks->False],
+
+Cell[BoxData[
+ GraphicsBox[{{{{}, {}, 
+     {RGBColor[1, 0.5, 0], AbsoluteThickness[1.6], Opacity[1.], 
+      LineBox[CompressedData["
+1:eJxFxW0w03EcAPD/lhDmGDIyWaXi7DgPu90yUeyuP3Iml2N0I2c0Z0YiMULq
+POSpNakkdHWpay2s0t08dO52xHm4vVCpXJc7287DraxtXfXC9/ficx9aZgE3
+m4hhWPw//9c+652hDNdG7JxhFjq1Y1nHd3ZPP/YwFyuCi5oOrJ3BauAeX+lN
+HGuHlRsz/BisF57QaNUnMAWsxsslUdg4LEvAuxem5uHrky1PpvM+wR+DVAq2
+cAW+s1J+MePGKsyo6JiiJejg8EpmzW32Bpxv7RzfMLkFk4gy/qzvT7hqvSqH
+NbwNZ3IpSoOXCV40d4bdL7HApOmIuUECFrmzYNEmMCaYAAdoqq1yrhBhpkUk
+kqh2wWbecLVKbwX7DT2372BYw46nLKwWgQ3MWzR/835lC2/VFdL6jHvgKBF7
+N9fPHjYmveG3iR1gQWFzlqmfBO9XaEyp846wzy/BtcMkJ7hR3vpV0Y8eWCWX
+2cU6w+vyD2k8HdqJwmgdqyXD338biJtHXWDpZf5k2Bj6QqONpjjFFTZ4Wh+s
+MKFTOS9GO9vd4GL9y7sS5l44L4SvLptD19rhJwty3eGkjIZtOokCW06XYoRH
+aN7Iu+h7sR7w8lv2QqgeHZGSO/SlzhPmFuoWkv33wVFHqJzlcXRyQT3xfKoX
+TA3FTXILevSWkuMqpcJeidWKERm6xAH3ye5CB9QsGQcfoKWiPwNnn6KFsdEu
+XSq0O2F2mbaGFo/I4tQ69NQl/mvxOvqqfrNt3IDWLrlxsjFveGwobeCxG5oq
+PuSRSEGX0nV1Rk80va/yHO6DlrX2kLX+6M24PEkHHR1vG6IND0ITJRPvm8LQ
+6aymYAYTrTQkd39moclyb4d6Njpf+KM0MBL9FzvPDUE=
+       
+       "]]}}, {}, {}}, {{}, {{}, 
+     {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+      0.012833333333333334`], AbsoluteThickness[1.6], PointBox[CompressedData["
+1:eJxTTMoPSmViYGAQAWIQnbPaY7ualIyDvIevpdgqUYdPc/XcdvBKOoSzfbkT
+Zirh8FzzU6VhgDBO+uhn/uCoQoT+lUfvJtpGSMHNYVqcWNZ7Rwqu/qDMvnmX
+d0k7GPe+/e54ACEP4XPC9cPchS4Pswedhsmjuw9VXtLh6g+nZn0HOTgNc8+h
+nn7BxUricH8vN+J8vjJQFsM8mD0wGgBtTIJb
+       "]]}, {}}, {}, {}, {{}, {}}}},
+  AspectRatio->1,
+  Axes->{True, True},
+  AxesLabel->{
+    FormBox["\"Log[Dv] innan behandling\"", TraditionalForm], 
+    FormBox["\"Log[Dv] efter behandling\"", TraditionalForm]},
+  AxesOrigin->{0, 1.5434043360656906`*^-7},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImagePadding->All,
+  ImageSize->Large,
+  Method->{
+   "DefaultBoundaryStyle" -> Automatic, "DefaultMeshStyle" -> 
+    AbsolutePointSize[6], "ScalingFunctions" -> None, 
+    "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+         Part[#, 1]], 
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+         Part[#, 1]], 
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->{All, All},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.05], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{3.702559729492877*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{
+  "\"\</Users/HAL/Desktop/KandidatPDE/changeDvNum.jpg\>\"", ",", "%27", ",", 
+   "\"\<JPEG\>\""}], "]"}]], "Input",
+ NumberMarks->False],
+
+Cell[BoxData["\<\"/Users/HAL/Desktop/KandidatPDE/changeDvNum.jpg\"\>"], \
+"Output",
+ CellChangeTimes->{3.70255974455648*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{
+  "\"\</Users/HAL/Desktop/KandidatPDE/DvRelative.jpg\>\"", ",", "%22", ",", 
+   "\"\<JPEG\>\""}], "]"}]], "Input",
+ NumberMarks->False],
+
+Cell[BoxData["\<\"/Users/HAL/Desktop/KandidatPDE/DvRelative.jpg\"\>"], \
+"Output",
+ CellChangeTimes->{3.702555787709083*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\[Alpha]-\[Mu]", "Subsection",
+ CellChangeTimes->{{3.70177251103372*^9, 3.701772518825747*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"\[Alpha]\[Mu]Pre", "=", 
+   RowBox[{"\[Alpha]Pre", "-", "\[Mu]Pre"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Alpha]\[Mu]Post", "=", 
+   RowBox[{"\[Alpha]Post", "-", "\[Mu]Post"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"patientID", "=", 
+    RowBox[{"Range", "[", 
+     RowBox[{"1", ",", "20"}], "]"}]}], ";"}], " ", 
+  RowBox[{"(*", 
+   RowBox[{"For", " ", "labeling", " ", "data", " ", "points"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[Alpha]\[Mu]PrePostData", "=", 
+    RowBox[{"Transpose", "@", 
+     RowBox[{"{", 
+      RowBox[{
+      "\[Alpha]\[Mu]Pre", ",", "\[Alpha]\[Mu]Post", ",", "patientID"}], 
+      "}"}]}]}], ";"}], " "}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"labels", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Text", "[", 
+      RowBox[{
+       RowBox[{"#", "[", 
+        RowBox[{"[", "3", "]"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"#", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], ",", 
+         RowBox[{"0.02", "+", 
+          RowBox[{"#", "[", 
+           RowBox[{"[", "2", "]"}], "]"}]}]}], "}"}]}], "]"}], "&"}], "/@", 
+    "\[Alpha]\[Mu]PrePostData"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{"\[Alpha]\[Mu]", ",", 
+     RowBox[{"{", 
+      RowBox[{"\[Alpha]\[Mu]", ",", "0", ",", 
+       RowBox[{"Max", "[", "\[Alpha]\[Mu]Pre", "]"}]}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"PlotStyle", "\[Rule]", "Orange"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"PlotRange", "\[Rule]", "All"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"AspectRatio", "\[Rule]", "1"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<\[Alpha]-\[Mu] innan behandling\>\"", ",", 
+        "\"\<\[Alpha]-\[Mu] efter behandling\>\""}], "}"}]}]}], 
+    "\[IndentingNewLine]", "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"ListPlot", "[", 
+    RowBox[{"\[Alpha]\[Mu]PrePostData", "[", 
+     RowBox[{"[", 
+      RowBox[{"All", ",", 
+       RowBox[{"{", 
+        RowBox[{"1", ",", "2"}], "}"}]}], "]"}], "]"}], "]"}]}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"Graphics", "[", 
+    RowBox[{"{", 
+     RowBox[{"Red", ",", "labels"}], "}"}], "]"}], "*)"}], 
+  "\[IndentingNewLine]", "]"}]}], "Input",
+ CellChangeTimes->{{3.7017725229314547`*^9, 3.701772692600073*^9}, {
+  3.701773024458557*^9, 3.701773032234559*^9}, {3.702534535953513*^9, 
+  3.7025345725054736`*^9}, {3.70253462406212*^9, 3.7025347032052*^9}, {
+  3.7025358645267024`*^9, 3.7025358745710573`*^9}, {3.7025393535328016`*^9, 
+  3.7025393743898497`*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{{{{}, {}, 
+     {RGBColor[1, 0.5, 0], AbsoluteThickness[1.6], Opacity[1.], 
+      LineBox[CompressedData["
+1:eJxFxW0w03EcAPDhjuQpT1PdGCqpU9F1rTpJ5ewB6VKRXauZdW2ah9gy2zXh
+LvPU4eZS6hzXiWNWq7Q/yloWWkZo8jTPK5e77NCL5KoXvr8Xn/v4JKScY1vi
+cLiof/5PCltdFNlHhmzsRGqtbMH2nNjYl67JlmBH4QAeOYOFUeEggW3yBewS
+rMxa4J7BOPDyWvx3GiaE3UPK/amYFFZZzJRQ9A/geH8xIWmhFu5RZU5LIhvg
+hBITu6BKAZuxtPBmgxIm9z094hbXAstG4nZ4d2HwqtEktP7TDjuYnNMqWjvg
+ejpxFE9/B6tpHDXXrIGD5VIFo7ETDr1XOfSW8gGum5VYqW264YIXNU2yNz3w
+L4uXxYZYHazVPBKoXHthopVAtum5HubRyyZEqj5Yar4bOC7rh7kUvief9RkW
+D39yvHxqAI7Z7fVQ5DIIX1cWzeVOoOXCa4fGWodg1TrJK6ngC7zSnmFP4xrg
+FEz/2iV8GJbzfXEurl9hr6TJCOYSOoZYcdDUMQJrt3ANF4tGYW5wfTaeMwYP
++E2+tyeNw7yIHIcY/ASs209Y0s+jOdGDZYeVRpgwJKoSUCbheabt8cVmdHeh
+zmjnPQVHDD5mEkvQB9Z+BPYuowPUqZa7EqfhQnaqj4cOLfWXENeDZuDqfA2x
+uBq9rSuX12IzC/cm9rnl2aLzLDzbztqhfx57tXnBEa1t+lZHwKNvlkdN39mJ
+1jE8YiNPonN+s9a3nkaT7iuezIWha/qpy7cpaGGYuPRZNNpv79RHPAM9pt2X
+PnMFXcrK2q5goteqXDlUNnrAKdxafAOd31jWRElGh1CN591T0Q05mbXydPRV
+YidNxEe7tzmbybfQPXGMSjchOnulIXQqC/0XUq1hUQ==
+       
+       "]]}}, {}, {}}, {{}, {{}, 
+     {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+      0.012833333333333334`], AbsoluteThickness[1.6], PointBox[CompressedData["
+1:eJxTTMoPSmViYGAQAWIQ/SZwh1zr64P2SUahBlorm+2rRda5P6x6Yt/RGnV5
+z+Mr9iDZwB33oOIt9hD1G6HqF9trxvQf+qqxB8qfDFW/z37S6XqP/bVrofx1
+cHVBYIET9lzXFxfYch2HmrvFfoXpWWu/ixeh4tvh5sDkYebD9DU/Oj5j97QL
+9rNmgsBOqPp5cP0wcQYwuGBvDAaH7ZcAZa8vfmD/qy5rT8nkE1B1K6H2LIGb
+I9bj9YrF5CCcj0rvg+sHAIQdm1A=
+       "]]}, {}}, {}, {}, {{}, {}}}},
+  AspectRatio->1,
+  Axes->{True, True},
+  AxesLabel->{
+    FormBox["\"\[Alpha]-\[Mu] innan behandling\"", TraditionalForm], 
+    FormBox["\"\[Alpha]-\[Mu] efter behandling\"", TraditionalForm]},
+  AxesOrigin->{0, 1.3061224489795919`*^-8},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImagePadding->All,
+  ImageSize->{517., Automatic},
+  Method->{
+   "DefaultBoundaryStyle" -> Automatic, "DefaultMeshStyle" -> 
+    AbsolutePointSize[6], "ScalingFunctions" -> None, 
+    "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+         Part[#, 1]], 
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+         Part[#, 1]], 
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->{All, All},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.05], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{
+  3.701772547665557*^9, {3.701772667568521*^9, 3.701772693934392*^9}, 
+   3.701773035272481*^9, 3.702534543593607*^9, {3.702534574707794*^9, 
+   3.702534589376054*^9}, 3.7025346369475994`*^9, {3.7025346674429383`*^9, 
+   3.7025347038231936`*^9}, 3.7025358752236996`*^9, {3.7025393574950085`*^9, 
+   3.7025393751555567`*^9}, 3.7025556883096313`*^9, 3.702846136708619*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Show", "[", 
+  RowBox[{"%18", ",", 
+   RowBox[{"ImageSize", "\[Rule]", "Large"}]}], "]"}]], "Input",
+ NumberMarks->False],
+
+Cell[BoxData[
+ GraphicsBox[{{{{}, {}, 
+     {RGBColor[1, 0.5, 0], AbsoluteThickness[1.6], Opacity[1.], 
+      LineBox[CompressedData["
+1:eJxFxW0w03EcAPDhjuQpT1PdGCqpU9F1rTpJ5ewB6VKRXauZdW2ah9gy2zXh
+LvPU4eZS6hzXiWNWq7Q/yloWWkZo8jTPK5e77NCL5KoXvr8Xn/v4JKScY1vi
+cLiof/5PCltdFNlHhmzsRGqtbMH2nNjYl67JlmBH4QAeOYOFUeEggW3yBewS
+rMxa4J7BOPDyWvx3GiaE3UPK/amYFFZZzJRQ9A/geH8xIWmhFu5RZU5LIhvg
+hBITu6BKAZuxtPBmgxIm9z094hbXAstG4nZ4d2HwqtEktP7TDjuYnNMqWjvg
+ejpxFE9/B6tpHDXXrIGD5VIFo7ETDr1XOfSW8gGum5VYqW264YIXNU2yNz3w
+L4uXxYZYHazVPBKoXHthopVAtum5HubRyyZEqj5Yar4bOC7rh7kUvief9RkW
+D39yvHxqAI7Z7fVQ5DIIX1cWzeVOoOXCa4fGWodg1TrJK6ngC7zSnmFP4xrg
+FEz/2iV8GJbzfXEurl9hr6TJCOYSOoZYcdDUMQJrt3ANF4tGYW5wfTaeMwYP
++E2+tyeNw7yIHIcY/ASs209Y0s+jOdGDZYeVRpgwJKoSUCbheabt8cVmdHeh
+zmjnPQVHDD5mEkvQB9Z+BPYuowPUqZa7EqfhQnaqj4cOLfWXENeDZuDqfA2x
+uBq9rSuX12IzC/cm9rnl2aLzLDzbztqhfx57tXnBEa1t+lZHwKNvlkdN39mJ
+1jE8YiNPonN+s9a3nkaT7iuezIWha/qpy7cpaGGYuPRZNNpv79RHPAM9pt2X
+PnMFXcrK2q5goteqXDlUNnrAKdxafAOd31jWRElGh1CN591T0Q05mbXydPRV
+YidNxEe7tzmbybfQPXGMSjchOnulIXQqC/0XUq1hUQ==
+       
+       "]]}}, {}, {}}, {{}, {{}, 
+     {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+      0.012833333333333334`], AbsoluteThickness[1.6], PointBox[CompressedData["
+1:eJxTTMoPSmViYGAQAWIQ/SZwh1zr64P2SUahBlorm+2rRda5P6x6Yt/RGnV5
+z+Mr9iDZwB33oOIt9hD1G6HqF9trxvQf+qqxB8qfDFW/z37S6XqP/bVrofx1
+cHVBYIET9lzXFxfYch2HmrvFfoXpWWu/ixeh4tvh5sDkYebD9DU/Oj5j97QL
+9rNmgsBOqPp5cP0wcQYwuGBvDAaH7ZcAZa8vfmD/qy5rT8nkE1B1K6H2LIGb
+I9bj9YrF5CCcj0rvg+sHAIQdm1A=
+       "]]}, {}}, {}, {}, {{}, {}}}},
+  AspectRatio->1,
+  Axes->{True, True},
+  AxesLabel->{
+    FormBox["\"\[Alpha]-\[Mu] innan behandling\"", TraditionalForm], 
+    FormBox["\"\[Alpha]-\[Mu] efter behandling\"", TraditionalForm]},
+  AxesOrigin->{0, 1.3061224489795919`*^-8},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImagePadding->All,
+  ImageSize->Large,
+  Method->{
+   "DefaultBoundaryStyle" -> Automatic, "DefaultMeshStyle" -> 
+    AbsolutePointSize[6], "ScalingFunctions" -> None, 
+    "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+         Part[#, 1]], 
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+         Part[#, 1]], 
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->{All, All},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.05], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{3.70255638738595*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{
+  "\"\</Users/HAL/Desktop/KandidatPDE/changeAlphaNum.jpg\>\"", ",", "%25", 
+   ",", "\"\<JPEG\>\""}], "]"}]], "Input",
+ NumberMarks->False],
+
+Cell[BoxData["\<\"/Users/HAL/Desktop/KandidatPDE/changeAlphaNum.jpg\"\>"], \
+"Output",
+ CellChangeTimes->{3.702556424275127*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{
+  "\"\</Users/HAL/Desktop/KandidatPDE/AlphaMuRelative.jpg\>\"", ",", "%18", 
+   ",", "\"\<JPEG\>\""}], "]"}]], "Input",
+ NumberMarks->False],
+
+Cell[BoxData["\<\"/Users/HAL/Desktop/KandidatPDE/AlphaMuRelative.jpg\"\>"], \
+"Output",
+ CellChangeTimes->{3.702555766266135*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{888, 903},
+WindowMargins->{{172, Automatic}, {Automatic, 3}},
+FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (July 28, \
+2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 122, 1, 64, "Section"],
+Cell[CellGroupData[{
+Cell[727, 27, 199, 2, 44, "Subsection"],
+Cell[929, 31, 9359, 250, 943, "Input"],
+Cell[CellGroupData[{
+Cell[10313, 285, 903, 19, 96, "Input"],
+Cell[11219, 306, 187, 2, 32, "Output"],
+Cell[11409, 310, 190, 2, 32, "Output"],
+Cell[11602, 314, 187, 2, 32, "Output"],
+Cell[11792, 318, 192, 2, 32, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12033, 326, 145, 2, 44, "Subsection"],
+Cell[CellGroupData[{
+Cell[12203, 332, 2268, 62, 285, "Input"],
+Cell[14474, 396, 3752, 77, 451, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18275, 479, 95, 1, 44, "Subsection"],
+Cell[CellGroupData[{
+Cell[18395, 484, 1776, 46, 201, "Input"],
+Cell[20174, 532, 247, 3, 32, "Output"],
+Cell[20424, 537, 2968, 65, 271, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23441, 608, 90, 1, 44, "Subsection"],
+Cell[CellGroupData[{
+Cell[23556, 613, 2396, 66, 285, "Input"],
+Cell[25955, 681, 3008, 65, 387, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[29000, 751, 145, 4, 32, "Input"],
+Cell[29148, 757, 2854, 63, 442, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[32039, 825, 186, 5, 32, "Input"],
+Cell[32228, 832, 124, 2, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[32389, 839, 185, 5, 32, "Input"],
+Cell[32577, 846, 124, 2, 32, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[32750, 854, 101, 1, 44, "Subsection"],
+Cell[CellGroupData[{
+Cell[32876, 859, 2753, 72, 327, "Input"],
+Cell[35632, 933, 3282, 69, 440, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[38951, 1007, 145, 4, 32, "Input"],
+Cell[39099, 1013, 2920, 64, 466, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[42056, 1082, 189, 5, 32, "Input"],
+Cell[42248, 1089, 128, 2, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[42413, 1096, 190, 5, 32, "Input"],
+Cell[42606, 1103, 129, 2, 32, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
